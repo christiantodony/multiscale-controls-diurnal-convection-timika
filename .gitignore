@@ -1,0 +1,42 @@
+# Python and notebooks
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Environments and secrets
+.env
+.venv/
+venv/
+.cdsapirc
+*.key
+*.pem
+
+# Large scientific inputs
+*.nc
+*.nc4
+*.grib
+*.grb
+*.grb2
+*.h5
+*.hdf5
+*.zarr/
+
+# Generated products
+outputs/figures/*
+outputs/tables/*
+!outputs/figures/.gitkeep
+!outputs/tables/.gitkeep
+
+# Restricted/local inputs
+data/raw/
+data/restricted/*
+!data/restricted/README.md
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

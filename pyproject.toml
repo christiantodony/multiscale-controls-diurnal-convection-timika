@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "timika-diurnal-convection"
+version = "0.1.0"
+description = "Reproducibility utilities for multiscale controls on diurnal convection in Timika"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Dony Christianto"}
+]
+dependencies = [
+  "matplotlib>=3.7",
+  "netCDF4>=1.6",
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "scipy>=1.10",
+  "xarray>=2023.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.5"]
+
+[project.urls]
+Publication = "https://doi.org/10.1002/qj.70297"
+Repository = "https://github.com/christiantodony/multiscale-controls-diurnal-convection-timika"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

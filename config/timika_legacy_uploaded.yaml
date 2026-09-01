@@ -1,0 +1,37 @@
+profile: legacy_uploaded
+status: candidate_not_publication_verified
+
+period:
+  start: "2001-01-01"
+  end: "2022-12-31"
+
+region:
+  target_latitude: -4.55
+  target_longitude: 136.89
+  analysis_box:
+    longitude: [136.5, 137.5]
+    latitude: [-5.5, -3.5]
+  local_time: WIT
+  utc_offset_hours: 9
+
+imerg:
+  variable: precipitation
+  time_name: time
+  latitude_name: lat
+  longitude_name: lon
+  samples_per_day: 48
+
+peak_selection:
+  daily_percentile: 50
+  rolling_points: 7
+  savgol_points: 7
+  savgol_order: 3
+  prominence_ratio: 0.20
+  maximum_index_range: [37, 42]
+  peak_count: 1
+  groups_utc: [0, 3, 6, 9, 12, 15, 18, 21]
+
+warning: >-
+  These numerical settings reproduce the visible uploaded notebooks and have
+  not yet been reconciled with every parameter stated in the accepted paper.
+
